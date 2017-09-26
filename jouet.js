@@ -1,9 +1,9 @@
 class Jouet {
 
-    constructor(unLibelle,uneTrancheAge,uneCategorie){
-        this._libelle = unLibelle;
-        this._trancheAge = uneTrancheAge;
-        this._categorie = uneCategorie;
+    constructor(libelle,trancheAge,categorie){
+        this._libelle = libelle;
+        this._trancheAge = trancheAge;
+        this._categorie = categorie;
 
         this._categorie.ajouterJouet(this);
     }

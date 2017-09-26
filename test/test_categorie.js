@@ -1,4 +1,4 @@
-const Categorie = require('../categorie');
+const Categorie = require('../categorie.js');
 const TrancheAge = require('../trancheAge.js');
 const Jouet = require('../jouet.js');
 

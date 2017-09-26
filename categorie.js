@@ -24,4 +24,4 @@ class Categorie {
     }
 
 }
-module.export = Categorie;
+module.exports = Categorie;
