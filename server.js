@@ -16,13 +16,13 @@ let categorie3 = new Categorie("Jeux d'éveil");
 
 let lesJouets = [];
 
-let unJouet1 = new Jouet("Draisienne junior bleue",tranche25,categorie1);
+let unJouet1 = new Jouet(1,"Draisienne junior bleue",tranche25,categorie1);
 lesJouets.push(unJouet1);
 
-let unJouet2 = new Jouet("Trotinette 2 en 1 space Blanche",tranche48,categorie1);
+let unJouet2 = new Jouet(2,"Trotinette 2 en 1 space Blanche",tranche48,categorie1);
 lesJouets.push(unJouet2);
 
-let unJouet3 = new Jouet("Atelier de bricolage Tap tap Véhicules",tranche48,categorie2);
+let unJouet3 = new Jouet(3,"Atelier de bricolage Tap tap Véhicules",tranche48,categorie2);
 lesJouets.push(unJouet3);
 
 //ROUTES
@@ -31,7 +31,7 @@ app.get('/', function (req,res){
     res.send(responseText);
 });
 
-//affiche tous les élèves
+//affiche tous les jouets
 app.get('/jouets',
     (req,res) => {
     let responseText = 'Voici la liste des jouets </br>';
@@ -41,6 +41,22 @@ app.get('/jouets',
     res.send(responseText);
     }
 );
+
+//Affiche le jouet d'id :id
+app.get('/jouets/:id',
+(req, res) => {
+
+    let id=req.param.id;
+
+    if(id < lesJouets.length+1){
+        let responseText = `Jouet : ${lesJouets[id-1].libelle}`;
+        res.send(responseText);
+    }
+    else
+    {
+        res.status(404).send('Sorry ! Toy doesn\'t exist');
+    }
+});
 
 //DEMARRAGE DU SERVEUR
 try {
