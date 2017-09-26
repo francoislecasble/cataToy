@@ -6,13 +6,13 @@ const TrancheAge = require('./trancheAge.js');
 const Categorie = require('./categorie.js');
 
 //DONNEES
-let tranche02 = new TrancheAge("tranche02",0,2);
-let tranche25 = new TrancheAge("tranche25",2,5);
-let tranche48 = new TrancheAge("tranche48",4,8);
+let tranche02 = new TrancheAge(1,"tranche02",0,2);
+let tranche25 = new TrancheAge(2,"tranche25",2,5);
+let tranche48 = new TrancheAge(3,"tranche48",4,8);
 
-let categorie1 = new Categorie("Plein air");
-let categorie2 = new Categorie("Jeux d'imagination");
-let categorie3 = new Categorie("Jeux d'éveil");
+let categorie1 = new Categorie(1,"Plein air");
+let categorie2 = new Categorie(2,"Jeux d'imagination");
+let categorie3 = new Categorie(3,"Jeux d'éveil");
 
 let lesJouets = [];
 
